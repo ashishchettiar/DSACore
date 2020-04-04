@@ -1,4 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
+<ItemGroup>
+  <PackageReference Include="Microsoft.NETCore.App" />
+</ItemGroup>
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
