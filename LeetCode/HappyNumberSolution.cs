@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace DSA.Problems.LeetCode
+namespace DSACore.LeetCode
 {
     //https://leetcode.com/problems/happy-number/
     //Write an algorithm to determine if a number is "happy".

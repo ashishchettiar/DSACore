@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Problems.LeetCode
+namespace DSACore.LeetCode
 {
 
     // https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/559/

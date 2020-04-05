@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace DSA.Problems.LeetCode
+namespace DSACore.LeetCode
 {
     // LC: https://leetcode.com/problems/climbing-stairs/
     public class ClimbingStairsSolution

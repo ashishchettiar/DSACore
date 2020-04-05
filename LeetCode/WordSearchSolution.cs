@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Problems.LeetCode
+namespace DSACore.LeetCode
 {
     //https://leetcode.com/problems/word-search/
     //Given a 2D board and a word, find if the word exists in the grid.

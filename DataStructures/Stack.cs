@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Problems.DataStructures
+namespace DSACore.DataStructures
 {
     public class Stack
     {

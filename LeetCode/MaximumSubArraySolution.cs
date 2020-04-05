@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DSA.Problems.LeetCode
+namespace DSACore.LeetCode
 {
     class MaximumSubArraySolution
     {

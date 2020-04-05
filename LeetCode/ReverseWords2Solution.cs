@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DSA.Problems.LeetCode
+namespace DSACore.LeetCode
 {
     //LC: https://leetcode.com/explore/interview/card/amazon/76/array-and-strings/522/
     class ReverseWords2Solution
