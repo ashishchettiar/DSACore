@@ -30,9 +30,32 @@ namespace DSACore.LeetCode
     1 <= stones.length <= 30
     1 <= stones[i] <= 1000
     */
-    public class LastStoneWeightSolution {
-    public int LastStoneWeight(int[] stones) {
-        return 0;
+
+    // Static void main
+    // [2,7,4,1,8,1]
+    //var stones = new int[] {2, 7, 4, 1, 8, 1};;
+    //var lastStone = new LastStoneWeightSolution();
+    //Console.WriteLine(lastStone.LastStoneWeight(stones));
+    public class LastStoneWeightSolution
+    {
+        public int LastStoneWeight(int[] stones)
+        {
+            while(stones.Length > 1)
+            {
+                Array.Sort(stones);
+                var diff = stones[stones.Length - 1] - stones[stones.Length - 2];
+                if(diff > 0)
+                {
+                    stones[stones.Length - 2] = diff;
+                    Array.Resize(ref stones, stones.Length - 1);
+                }
+                else
+                {
+                    Array.Resize(ref stones, stones.Length - 2);
+                }
+            }
+
+            return stones.Length == 1 ? stones[0] : 0;
+        }
     }
-}
 }
