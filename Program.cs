@@ -7,10 +7,15 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var stones = new int[] {2, 7, 4, 1, 8, 1};;
-            var lastStone = new LastStoneWeightSolution();
+            var input = new int[3][];
+            input[0] = new int[] {1, 1};
+            input[0] = new int[] {1, 1};
+            input[0] = new int[] {0, 2};
+            input[0] = new int[] {1, 3};
+
+            var lastStone = new PerformStringShiftsSolution();
             Console.WriteLine("Pause to attach debugger");
-            Console.WriteLine(lastStone.LastStoneWeight(stones));
+            Console.WriteLine(lastStone.StringShift("qwerty", input));
             Console.Read();
         }
     }
