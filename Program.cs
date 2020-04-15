@@ -7,15 +7,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var input = new int[3][];
-            input[0] = new int[] {1, 1};
-            input[0] = new int[] {1, 1};
-            input[0] = new int[] {0, 2};
-            input[0] = new int[] {1, 3};
+            var input = new int[] {1,2,3,4};
 
-            var lastStone = new PerformStringShiftsSolution();
+            var lastStone = new ProductOfArrayExceptSelfSolution();
             Console.WriteLine("Pause to attach debugger");
-            Console.WriteLine(lastStone.StringShift("qwerty", input));
+            Console.Read();
+            Console.WriteLine(lastStone.ProductExceptSelf(input));
             Console.Read();
         }
     }
