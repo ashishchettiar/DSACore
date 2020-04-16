@@ -7,12 +7,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var input = new int[] {1,2,3,4};
+            var input = "(";
 
-            var lastStone = new ProductOfArrayExceptSelfSolution();
+            var lastStone = new ValidParenthesisStringSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(lastStone.ProductExceptSelf(input));
+            Console.WriteLine(lastStone.CheckValidString(input));
             Console.Read();
         }
     }
