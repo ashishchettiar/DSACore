@@ -54,20 +54,19 @@ namespace DSACore.LeetCode
                     starStack.Push(new Dto(charArray[i], i));
                 }
 
-                if(charArray[i] == ')')
+                if (charArray[i] == ')')
                 {
-                    if(stack.Count != 0) stack.Pop();
-                    else if(starStack.Count != 0) starStack.Pop();
+                    if (stack.Count != 0) stack.Pop();
+                    else if (starStack.Count != 0) starStack.Pop();
                     else return false;
                 }
-
             }
 
-            if(stack.Count == 0 && starStack.Count == 0) return true;
+            if (stack.Count == 0 && starStack.Count == 0) return true;
 
-            while(stack.Count != 0 && starStack.Count != 0)
+            while (stack.Count != 0 && starStack.Count != 0)
             {
-                if(stack.Peek().Position > starStack.Peek().Position) return false;
+                if (stack.Peek().Position > starStack.Peek().Position) return false;
                 stack.Pop();
                 starStack.Pop();
             }
