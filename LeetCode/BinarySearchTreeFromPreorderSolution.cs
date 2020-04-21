@@ -35,11 +35,30 @@ namespace DSACore.LeetCode
         {
             if (preorder == null || preorder.Length == 0) return null;
 
-            var PreOrder = preorder;
-            Array.Sort(preorder);
-            var inOrder = preorder;
+            TreeNode root = null;
 
-            var root = new TreeNode(preorder[0]);
+            foreach (var item in preorder)
+            {
+                root = ConstructBst(item, root);
+            }
+            return root;
+        }
+
+        private TreeNode ConstructBst(int item, TreeNode root)
+        {
+            if (root == null)
+            {
+                return new TreeNode(item);
+            }
+
+            if (item > root.val)
+            {
+                root.right = ConstructBst(item, root.right);
+            }
+            else
+            {
+                root.left = ConstructBst(item, root.left);
+            }
 
             return root;
         }

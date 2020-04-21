@@ -7,12 +7,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[] { 5,1,3 };
+            int[] nums = new int[] { 4,2 };
 
-            var rotated = new SearchRotatedSortedArraySolution();
+            var rotated = new BinarySearchTreeFromPreorderSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(rotated.Search(nums, 5));
+            Console.WriteLine(rotated.BstFromPreorder(nums));
             Console.Read();
         }
     }
