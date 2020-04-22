@@ -7,12 +7,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[] { 4,2 };
+            int[] nums = new int[] { 0,0,0,0,0,0,0,0,0,0 };
 
-            var rotated = new BinarySearchTreeFromPreorderSolution();
+            var rotated = new SubarraySumEqualsKSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(rotated.BstFromPreorder(nums));
+            Console.WriteLine(rotated.SubarraySum(nums, 0));
             Console.Read();
         }
     }
