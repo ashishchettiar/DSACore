@@ -7,12 +7,10 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[] { 0,0,0,0,0,0,0,0,0,0 };
-
-            var rotated = new SubarraySumEqualsKSolution();
+            var bitwise = new BitwiseANDofNumbersRangeSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(rotated.SubarraySum(nums, 0));
+            Console.WriteLine(bitwise.RangeBitwiseAnd(5, 7));
             Console.Read();
         }
     }
