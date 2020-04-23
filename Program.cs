@@ -7,10 +7,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var bitwise = new BitwiseANDofNumbersRangeSolution();
+            int[] nums = new int[] { 1,2,0 };
+            var sc = new SortColorsSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(bitwise.RangeBitwiseAnd(5, 7));
+            sc.SortColors(nums);
+            Console.WriteLine();
             Console.Read();
         }
     }
