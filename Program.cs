@@ -8,11 +8,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var input = new int[] { 2,3,1,1,4 };
-            var game = new JumpGameSolution();
+            var t1 = "abcde";
+            var t2 = "ace";
+            var lcs = new LongestCommonSubsequenceSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(game.CanJump(input));
+            Console.WriteLine(lcs.LongestCommonSubsequence(t1, t2));
             Console.Read();
         }
     }
