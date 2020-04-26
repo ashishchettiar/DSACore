@@ -8,24 +8,11 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var cache = new LRUCache(3);
+            var input = new int[] { 2,3,1,1,4 };
+            var game = new JumpGameSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            cache.Put(1, 1);
-            cache.Put(2, 2);
-            cache.Put(3, 3);
-            cache.Put(4, 4);
-            Console.WriteLine(cache.Get(4));
-            Console.WriteLine(cache.Get(3));
-            Console.WriteLine(cache.Get(2));
-            Console.WriteLine(cache.Get(1));
-            cache.Put(5, 5);
-            Console.WriteLine(cache.Get(1));
-            Console.WriteLine(cache.Get(2));
-            Console.WriteLine(cache.Get(3));
-            Console.WriteLine(cache.Get(4));
-            Console.WriteLine(cache.Get(5));
-            Console.WriteLine();
+            Console.WriteLine(game.CanJump(input));
             Console.Read();
         }
     }
