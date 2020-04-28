@@ -23,7 +23,9 @@ namespace DSACore.LeetCode
         public int MaximalSquare(char[][] matrix)
         {
             var max = 0;
-            var min = 0;
+            
+            if(matrix == null || matrix.Length == 0) return 0;
+            
             var dp = new int[matrix.Length + 1, matrix[0].Length + 1];
 
             for (int row = 0; row < matrix.Length + 1; row++)
@@ -38,8 +40,8 @@ namespace DSACore.LeetCode
                     {
                         if (matrix[row - 1][col - 1] == '1')
                         {
-                            min = Math.Min(Math.Min(dp[row - 1, col], dp[row, col - 1]), dp[row - 1, col - 1]);
-                            max = Math.Max(max, min + 1);
+                            dp[row, col] = Math.Min(Math.Min(dp[row - 1, col], dp[row, col - 1]), dp[row - 1, col - 1]) + 1;
+                            max = Math.Max(max, dp[row, col]);
                         }
                         else
                         {
@@ -49,7 +51,7 @@ namespace DSACore.LeetCode
                 }
             }
 
-            return max;
+            return max*max;
         }
     }
 }
