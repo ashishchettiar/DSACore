@@ -8,12 +8,17 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var t1 = "abcde";
-            var t2 = "ace";
-            var lcs = new LongestCommonSubsequenceSolution();
+            char[][] board = new char[4][];
+
+            board[0] = new char[] { '1','0','1','0','0' };
+            board[1] = new char[] { '1','0','1','1','1' };
+            board[2] = new char[] { '1','1','1','1','1' };
+            board[3] = new char[] { '1','0','0','1','0' };
+
+            var mss = new MaximalSquareSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(lcs.LongestCommonSubsequence(t1, t2));
+            Console.WriteLine(mss.MaximalSquare(board));
             Console.Read();
         }
     }
