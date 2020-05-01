@@ -54,33 +54,29 @@ namespace DSACore.LeetCode
             }
         }
 
-        int nextPosition = 0;
-        bool hasLeaf = false;
         public bool IsValidSequence(TreeNode root, int[] arr)
         {
-            if (root == null) return false;
-
-            return FindPath(root, arr);
+            if (root == null || arr == null) return false;
+            int nextPosition = 0;
+            return FindPath(root, arr, nextPosition);
         }
 
-        private bool FindPath(TreeNode node, int[] arr)
+        private bool FindPath(TreeNode node, int[] arr, int nextPosition)
         {
-            if (node == null) return
-
-            if (node.left != null && nextPosition <= arr.Length - 1 && node.left.val == arr[nextPosition]) // left - left - value // node.left.left.value
+            if(node == null) return false;
+            else if(nextPosition == arr.Length) 
             {
-                nextPosition++;
-                Console.WriteLine("Traversing left node " + nextPosition + " next left node " + node.left.val);
-                FindPath(node.left, arr); // left node.left.value - value
+                Console.WriteLine("next position is " + nextPosition);
+                return false;
             }
+            else if(arr[nextPosition] != node.val)
+            { 
+                Console.WriteLine("node value " + node.val + " arr value " + arr[nextPosition] + " next pos " + nextPosition);
+                return false;
+            }
+            else if(node.left == null && node.right == null && nextPosition == arr.Length - 1) return true;
 
-            if (node.right != null && nextPosition <= arr.Length - 1 && node.right.val == arr[nextPosition])
-            {
-                nextPosition++;
-                Console.WriteLine("Traversing right node " + nextPosition + " next right node " + node.right.val);
-                FindPath(node.right, arr);
-            }
-            
+            return FindPath(node.left, arr, nextPosition + 1) || FindPath(node.right, arr, nextPosition + 1);
         }
     }
 }
