@@ -8,23 +8,15 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            int []arr = {0,1,0,1};  // [0,1,0,0,1,0,null,null,1,0,0]
-            ValidSequenceFromRootToLeaves.TreeNode root= new ValidSequenceFromRootToLeaves.TreeNode(0); 
-            root.left=new ValidSequenceFromRootToLeaves.TreeNode(1); 
-            root.right=new ValidSequenceFromRootToLeaves.TreeNode(0); 
-            root.left.left = new ValidSequenceFromRootToLeaves.TreeNode(0);  
-            root.left.right = new ValidSequenceFromRootToLeaves.TreeNode(1);  
-            root.left.left.left = null;
-            root.left.left.right = new ValidSequenceFromRootToLeaves.TreeNode(1);  
-            root.left.right.left = new ValidSequenceFromRootToLeaves.TreeNode(0);
-            root.left.right.right = new ValidSequenceFromRootToLeaves.TreeNode(0);
-            root.right.left =new ValidSequenceFromRootToLeaves.TreeNode(0); 
-            root.right.right =null; 
+            CousinsBinaryTreeSolution.TreeNode root = new CousinsBinaryTreeSolution.TreeNode(1);
+            root.left = new CousinsBinaryTreeSolution.TreeNode(2);
+            root.right = new CousinsBinaryTreeSolution.TreeNode(3);
+            root.left.left = new CousinsBinaryTreeSolution.TreeNode(4);
 
-            var mss = new ValidSequenceFromRootToLeaves();
+            var mss = new CousinsBinaryTreeSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(mss.IsValidSequence(root, arr));
+            Console.WriteLine(mss.IsCousins(root, 4, 3));
             Console.Read();
         }
     }
