@@ -8,15 +8,18 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            CousinsBinaryTreeSolution.TreeNode root = new CousinsBinaryTreeSolution.TreeNode(1);
-            root.left = new CousinsBinaryTreeSolution.TreeNode(2);
-            root.right = new CousinsBinaryTreeSolution.TreeNode(3);
-            root.left.left = new CousinsBinaryTreeSolution.TreeNode(4);
+            var input = new int[5][] {
+                    new int[] {-4, -3 },
+                    new int[] {1, 0},
+                    new int[] {3, -1},
+                    new int[] {0, -1},
+                    new int[] {-5, 2}
+                 };
 
-            var mss = new CousinsBinaryTreeSolution();
+            var mss = new CheckIfStraightLineSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(mss.IsCousins(root, 4, 3));
+            Console.WriteLine(mss.CheckStraightLine(input));
             Console.Read();
         }
     }
