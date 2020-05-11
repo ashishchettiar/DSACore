@@ -13,18 +13,24 @@ namespace DSACore.Algorithms
             int low = 0;
             int high = nums.Length -1;
             
-            return 0;
-        }
+            while(high > low)
+            {
+                var mid = low + (high - low) / 2;
+                if(nums[mid] > numberToFind)
+                {
+                    high = mid - 1;
+                }
+                else if(nums[mid] < numberToFind)
+                {
+                    low = mid + 1;
+                }
+                else
+                {
+                    return nums[mid];
+                }
+            }
 
-        private int FindIndex(int[] nums, int numberToFind, int low, int high)
-        {
-            return GetMid(low, high);
+            return -1;
         }
-
-        private int GetMid(int low, int high)
-        {
-            return (low + high) / 2;
-        }
-        
     }
 }
