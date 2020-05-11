@@ -8,18 +8,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var input = new int[5][] {
-                    new int[] {-4, -3 },
-                    new int[] {1, 0},
-                    new int[] {3, -1},
-                    new int[] {0, -1},
-                    new int[] {-5, 2}
-                 };
+            var input = new int[][] {};
 
-            var mss = new CheckIfStraightLineSolution();
+            var mss = new FindJudgeSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(mss.CheckStraightLine(input));
+            Console.WriteLine(mss.FindJudge(1, input));
             Console.Read();
         }
     }
