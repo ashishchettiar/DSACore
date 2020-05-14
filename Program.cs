@@ -9,12 +9,19 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var input = new int[] {1,1,2};
+            var trie = new Trie();
 
-            var mss = new SingleElementSortedArraySolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(mss.SingleNonDuplicate(input));
+            
+            trie.Insert("hello");
+            Console.WriteLine(trie.Search("hell")); // returns false
+            Console.WriteLine(trie.Search("helloa"));     // returns false
+            Console.WriteLine(trie.Search("hello"));     // returns true
+            Console.WriteLine(trie.StartsWith("hell"));     // returns true
+            Console.WriteLine(trie.StartsWith("helloa"));     // returns false
+            Console.WriteLine(trie.StartsWith("hello"));     // returns true
+            
             Console.Read();
         }
     }
