@@ -56,6 +56,7 @@ namespace DSACore.LeetCode
                 
                 tempPointer = tempPointer.next;
                 endPointer = endPointer.next;
+                endPointer.next = null;
 
                 counter--;
             }
