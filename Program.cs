@@ -9,19 +9,16 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var trie = new Trie();
+            var ca = new OddEvenLinkedListSolution();
+            var input = new OddEvenLinkedListSolution.ListNode(1);
+            input.next = new OddEvenLinkedListSolution.ListNode(2);
+            input.next.next = new OddEvenLinkedListSolution.ListNode(3);
+            input.next.next.next = new OddEvenLinkedListSolution.ListNode(4);
+            input.next.next.next = new OddEvenLinkedListSolution.ListNode(5);
 
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            
-            trie.Insert("hello");
-            Console.WriteLine(trie.Search("hell")); // returns false
-            Console.WriteLine(trie.Search("helloa"));     // returns false
-            Console.WriteLine(trie.Search("hello"));     // returns true
-            Console.WriteLine(trie.StartsWith("hell"));     // returns true
-            Console.WriteLine(trie.StartsWith("helloa"));     // returns false
-            Console.WriteLine(trie.StartsWith("hello"));     // returns true
-            
+            Console.WriteLine(ca.OddEvenList(input)); // returns false
             Console.Read();
         }
     }
