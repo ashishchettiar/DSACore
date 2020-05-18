@@ -9,16 +9,13 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var ca = new OddEvenLinkedListSolution();
-            var input = new OddEvenLinkedListSolution.ListNode(1);
-            input.next = new OddEvenLinkedListSolution.ListNode(2);
-            input.next.next = new OddEvenLinkedListSolution.ListNode(3);
-            input.next.next.next = new OddEvenLinkedListSolution.ListNode(4);
-            input.next.next.next = new OddEvenLinkedListSolution.ListNode(5);
+            var ca = new FindAllAnagramsSolution();
+            var input = "cbaebabacd";
+            var p = "abc";
 
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(ca.OddEvenList(input)); // returns false
+            Console.WriteLine(ca.FindAnagrams(input, p)); // returns false
             Console.Read();
         }
     }
