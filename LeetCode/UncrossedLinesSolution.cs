@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+
+namespace DSACore.LeetCode
+{
+    /*
+    https://leetcode.com/problems/uncrossed-lines/
+    We write the integers of A and B (in the order they are given) on two separate horizontal lines.
+
+    Now, we may draw connecting lines: a straight line connecting two numbers A[i] and B[j] such that:
+
+    A[i] == B[j];
+    The line we draw does not intersect any other connecting (non-horizontal) line.
+    Note that a connecting lines cannot intersect even at the endpoints: each number can only belong to one connecting line.
+
+    Return the maximum number of connecting lines we can draw in this way.
+
+    Example 1:
+
+
+    Input: A = [1,4,2], B = [1,2,4]
+    Output: 2
+    Explanation: We can draw 2 uncrossed lines as in the diagram.
+    We cannot draw 3 uncrossed lines, because the line from A[1]=4 to B[2]=4 will intersect the line from A[2]=2 to B[1]=2.
+    Example 2:
+
+    Input: A = [2,5,1,2,5], B = [10,5,2,1,5,2]
+    Output: 3
+    Example 3:
+
+    Input: A = [1,3,7,1,7,5], B = [1,9,2,5,1]
+    Output: 2
+    
+
+    Note:
+
+    1 <= A.length <= 500
+    1 <= B.length <= 500
+    1 <= A[i], B[i] <= 2000
+    */
+    public class UncrossedLinesSolution
+    {
+        public int MaxUncrossedLines(int[] A, int[] B)
+        {
+            var dp = new int[A.Length + 1, B.Length + 1];
+
+            for(int row = 0; row < A.Length + 1; row++)
+            {
+                for(int col = 0; col < B.Length + 1; col++)
+                {
+                    if(row == 0 || col == 0)
+                    {
+                        dp[row, col] = 0;
+                    }
+                    else if(A[row - 1] == B[col - 1])
+                    {
+                        dp[row, col] = dp[row - 1, col - 1] + 1;
+                    }
+                    else
+                    {
+                        dp[row, col] = Math.Max(dp[row, col -1], dp[row - 1, col]);
+                    }
+                }
+            }
+
+            return dp[A.Length, B.Length];
+        }
+    }
+}
