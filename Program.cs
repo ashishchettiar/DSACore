@@ -9,11 +9,11 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var ca = new EditDistanceSolution();
-
+            var ca = new CoinChange2Solution();
+            var coins = new int[] {1,2,5};
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(ca.MinDistance("zoologicoarchaeologist", "zoogeologist")); // returns false
+            Console.WriteLine(ca.Change(5, coins)); // returns false
             Console.Read();
         }
     }
