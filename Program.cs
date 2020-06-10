@@ -9,11 +9,11 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var ca = new IsSubsequenceSolution();
-
+            var ca = new SearchInsertPositionSolution();
+            var input = new int[] {1,3};
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(ca.IsSubsequence("","abc")); // returns true
+            Console.WriteLine(ca.SearchInsert(input, 2)); // returns true
             Console.Read();
         }
     }
