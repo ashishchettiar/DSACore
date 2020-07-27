@@ -18,5 +18,5 @@ In terminal run "dotnet restore"
 
 ## Run and Debug
 
-In terminal run "dotnet run"
-Attach debugger to "DSACore.dll"
+1. In terminal run "dotnet run"
+2. Attach debugger to "DSACore.dll"
