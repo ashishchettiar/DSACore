@@ -9,11 +9,12 @@ namespace DSACore
     {
         static void Main(string[] args)
         {
-            var input = new int[] {-19,-46,-19,-46,-9,-9,-19,17,17,17,-13,-13,-9,-13,-46,-28};
-            var ca = new SingleNumberIISolution();
+            var ca = new QueueUsingStacksSolution();
             Console.WriteLine("Pause to attach debugger");
             Console.Read();
-            Console.WriteLine(ca.SingleNumber(input)); // returns true
+            ca.Push(1);
+            ca.Push(2);
+            ca.Peek();
             Console.Read();
         }
     }
